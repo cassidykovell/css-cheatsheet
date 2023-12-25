@@ -56,7 +56,7 @@ main {
 }
 
 .code-card {
-    background-image: linear-gradient(
+    background: linear-gradient(
         rgba(232, 102, 236, 0.3) 0%,
         rgba(232, 102, 236, 0.6) 100%
     );
@@ -64,13 +64,14 @@ main {
     color: var(--gin);
     font-size: 12px;
     line-height: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.code-card .card-header {
+.card .card-header .code-card {
     border-radius: 8px;
     transition: all 0.5s ease-in-out;
 }
 
-.code-card:hover, .code-card:hover .card-header{
+.card:hover, .card-header:hover, .code-card:hover{
     box-shadow: inset 0px 0px 8px
 rgba(232, 102, 236, 1), 0 0 15px
 rgba(232, 102, 236, 1);
@@ -82,3 +83,21 @@ footer {
     padding: 30px;
     font-size: 20px
 }
+
+@media (max-width: 768px) {
+    main {
+        display:grid;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+@media (max-width: 425px) {
+    main {
+        display:grid;
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);  
+    }
+
+}
+    
